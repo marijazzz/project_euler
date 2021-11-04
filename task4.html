@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What is the 10 001st prime number?</h2>
+
+<p id="demo"></p>
+
+<script>
+const arr = [2, 3, 5, 7, 11, 13];
+var i = 14;
+var flag;
+while (arr.length < 10001) {
+	flag = true;
+	for (j = 0; j < arr.length; j++){
+		if (i % arr[j] == 0) {
+			flag = false;
+			break;
+		}
+	}
+	if (flag == true){arr.push(i)}
+	i ++;
+}
+
+document.getElementById("demo").innerHTML = arr[arr.length - 1];
+</script>
+
+</body>
+</html>

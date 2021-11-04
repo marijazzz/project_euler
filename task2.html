@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.</h2>
+
+<p id="demo"></p>
+
+<script>
+const fibb = [1, 2];
+var sum = 2;
+var x;
+while (fibb[fibb.length - 1] < 4000000) {
+   x = fibb[fibb.length - 1] + fibb[fibb.length - 2]
+   fibb.push(x)
+   if (x % 2 == 0) {
+      sum += x
+   }
+}
+
+document.getElementById("demo").innerHTML = sum;
+</script>
+
+</body>
+</html>
